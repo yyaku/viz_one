@@ -36,50 +36,50 @@ if st.sidebar.button('Submit'):
     
     #fig, ax = plt.subplots()
     
-    fig = px.line(x=dates, y=ndvi_vals, title='NDVI')
+    # fig = px.line(x=dates, y=ndvi_vals, title='NDVI')
     # fig.update_xaxes(tickmode='array', tickvals=list(range(len(dates))), ticktext=dates)
 
-    st.plotly_chart(fig)
+    # st.plotly_chart(fig)
     
-    fig = px.line(x=dates, y=ndwi_vals, title='GNDVI')
-    st.plotly_chart(fig)
+    # fig = px.line(x=dates, y=ndwi_vals, title='GNDVI')
+    # st.plotly_chart(fig)
     
-    fig = px.line(x=dates, y=ndre_vals, title='NDRE')
-    st.plotly_chart(fig)
+    # fig = px.line(x=dates, y=ndre_vals, title='NDRE')
+    # st.plotly_chart(fig)
   
     
-    fig = px.line(x=dates, y=gci_vals, title='GCI')
-    st.plotly_chart(fig)
+    # fig = px.line(x=dates, y=gci_vals, title='GCI')
+    # st.plotly_chart(fig)
     
     
-    # fig, ax = plt.subplots(figsize=(15, 7))
-    # sns.lineplot(x=dates, y=ndvi_vals,marker='.', ax=ax)
-    # ax.set_title('NDVI')
+    fig, ax = plt.subplots(figsize=(15, 7))
+    sns.lineplot(x=dates, y=ndvi_vals,marker='.', ax=ax)
+    ax.set_title('NDVI')
 
-    # plt.xticks(rotation=45, ha='right')
-    # st.pyplot(fig)
+    plt.xticks(rotation=45, ha='right')
+    st.pyplot(fig)
     
-    
-    # fig, ax = plt.subplots(figsize=(15, 7))
-    # sns.lineplot(x=dates, y=ndre_vals,marker='.', ax=ax)
-    # ax.set_title('NDRE')
+    fig, ax = plt.subplots(figsize=(15, 7))
+    sns.lineplot(x=dates, y=ndwi_vals,marker='.', ax=ax)
+    ax.set_title('GNDVI')
 
-    # plt.xticks(rotation=45, ha='right')
-    # st.pyplot(fig)
+    plt.xticks(rotation=45, ha='right')
+    st.pyplot(fig)
     
-    # fig, ax = plt.subplots(figsize=(15, 7))
-    # sns.lineplot(x=dates, y=ndwi_vals,marker='.', ax=ax)
-    # ax.set_title('NDWI')
-
-    # plt.xticks(rotation=45, ha='right')
-    # st.pyplot(fig)
     
-    # fig, ax = plt.subplots(figsize=(15, 6))
-    # sns.lineplot(x=dates, y=gci_vals,marker='.', ax=ax)
-    # ax.set_title('GCI')
+    fig, ax = plt.subplots(figsize=(15, 7))
+    sns.lineplot(x=dates, y=ndre_vals,marker='.', ax=ax)
+    ax.set_title('NDRE')
 
-    # plt.xticks(rotation=45, ha='right')
-    # st.pyplot(fig)
+    plt.xticks(rotation=45, ha='right')
+    st.pyplot(fig)
+    
+    fig, ax = plt.subplots(figsize=(15, 6))
+    sns.lineplot(x=dates, y=gci_vals,marker='.', ax=ax)
+    ax.set_title('GCI')
+
+    plt.xticks(rotation=45, ha='right')
+    st.pyplot(fig)
 
 
 
